@@ -74,6 +74,17 @@ public class BowlingKataUnitTests {
 		assertEquals(24, g.scoreGame());
 	}
 	
+	@Test
+	public void perfectGameReturns300() {
+		//arrange
+		
+		//act
+		rollMany(12, 10);
+		
+		//assert
+		assertEquals(300, g.scoreGame());
+	}
+	
 	public void rollMany(int rolls, int pins){
 		for(int i = 0; i < rolls; i++){
 			g.roll(pins);
